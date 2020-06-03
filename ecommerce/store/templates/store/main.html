@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+{% load static %}
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="{% static 'css/main.css' %}">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0 , minimum-scale=1 , maximum-scale = 1">
+    <title>E-commerce</title>
+</head>
+<body>
+
+    <nav class="navbar navbar-expand-lg navbar-darkt bg-dark">
+        <div class="collapse navbar-collapse">
+            <div class="navbar-header ecom">
+              <a class="navbar-brand " > <strong>E-commerce</strong> </a>
+            </div>
+
+            <ul class="navbar-nav ">
+              <li class="nav-item"><a href="{% url 'store' %}"> Store   </a></li>
+            </ul>
+        </div>
+
+        <div class="form-inline my-2 my-lg-0">
+          <a class="login" href="" class="btn btn-warning">Login</a>
+
+        </div>
+
+        <a class="cart" href=""> 
+            <img src="{% static 'images/cart.png' %}" alt="" height="25px" width="25px">
+        </a>
+        <p id="card-total">0</p>
+
+    </nav>
+
+    <div class="container">
+           {% block content %}
+
+           {% endblock content%}
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+
+	<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+    
+</body>
+</html>
