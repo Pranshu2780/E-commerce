@@ -92,3 +92,14 @@ body{
     display: inline-block;
     padding-right: 10px;
 }
+
+.form-field{
+	width:250px;
+	display: inline-block;
+	padding: 5px;
+}
+
+.hu{
+    list-style: none;
+    text-decoration: none;
+}

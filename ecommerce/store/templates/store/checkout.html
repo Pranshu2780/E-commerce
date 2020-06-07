@@ -3,6 +3,70 @@
 
 {% block content %}
 <div>
-    
+    <div class="row">
+        <div class="col-lg-6">
+            <div class="box-element">
+                    <form>
+                        <div id="user-info">
+                            <div class="form-field">
+                                  <input required class="form-control" type="text" name="Name" placeholder="Name">
+                            </div>
+                            
+                            <div class="form-field">
+                                 <input required class="form-control" type="text" name="E-mail" placeholder="E-mail">
+                            </div>
+
+                        </div>
+
+                        <div id="Shopping-info">
+                            <hr>
+                            <p>Shipping Information</p>
+                            <hr>
+                            <input required class="form-control" type="text" name="adress" placeholder="Address">
+
+                            <input required class="form-control" type="text" name="city" placeholder="City">
+
+                            <input required class="form-control" type="text" name="State" placeholder="State">
+
+                            <input required class="form-control" type="text" name="Pin Code" placeholder="Pin Code">
+                        </div>
+                        <hr>
+                        <input type="submit" class="btn btn-success btn-block" value="continue">
+                    </form>
+            </div>
+        </div>
+
+         <div class="col-lg-6">
+            <div class="box-element">
+                  <a class="btn btn-dark" href="/cart">Back to Cart</a>
+                  <br>
+                  <br>
+                
+                    <table class="table">
+                        <tr>
+                            <th><h1><strong>Order Summary</strong></h1></th>
+                        </tr>
+
+                     </table>
+            
+            </div>
+
+            <div class="box-element">
+                <div class="cart-row">
+                    <div style="flex:2"> <img  class="row-image" src="{% static 'images/placeholder.png'%}" alt=""></div> 
+                    <div style="flex:2">Product-1</div>
+                    <div style="flex:1">Rs.20</div>
+                    <div style="flex:1">x2</div>
+                 
+                </div>
+              </div>
+
+              <div class="box-element">
+                       <div> <strong> <h4>Items:</h4> </strong> </div>
+                       <div> <strong> <h4>Total:Rs.</h4> </strong> </div>
+              </div>
+        </div>
+        
+    </div>
 </div>
 {% endblock content %}
