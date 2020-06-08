@@ -4,38 +4,21 @@
 {% block content %}
 
 <div class="row">
+    
+    {% for product in products%}
+
     <div class="col-lg-4">
-        <img class="thumbnail" src="{% static 'images/placeholder.png' %}" alt="">
+        <img class="thumbnail" src="{{product.imageURL}}" alt="">
         <div class="box-element product">
-            <h6>Product</h6>
+            <h6>{{product.name}}</h6>
             <hr>
             <button class="btn btn-outline-secondary add-btn">Add to cart</button>
             <a class="btn btn-outline-success" href="#">View</a>
-            <h4 style ="display: inline-block; float: right"  >Rs.200</h4>
+            <h4 style ="display: inline-block; float: right"  >Rs. {{product.price|floatformat:2}}</h4>
         </div>
     </div>
+    {%endfor%}
     
-    <div class="col-lg-4">
-        <img class="thumbnail" src="{% static 'images/placeholder.png' %}" alt="">
-        <div class="box-element product">
-              <h6>Product</h6>
-              <hr>
-              <button class="btn btn-outline-secondary add-btn">Add to cart</button>
-              <a class="btn btn-outline-success" href="#">View</a>
-              <h4 style ="display: inline-block; float: right"  >Rs.200</h4>
-        </div>
-    </div>
-    
-    <div class="col-lg-4">
-        <img class="thumbnail" src="{% static 'images/placeholder.png' %}" alt="">
-        <div class="box-element product">
-            <h6>Product</h6>
-            <hr>
-            <button class="btn btn-outline-secondary add-btn">Add to cart</button>
-            <a class="btn btn-outline-success" href="#">View</a>
-            <h4 style ="display: inline-block; float: right"  >Rs.200</h4>
-        </div>
-    </div>
 </div>
 
 
