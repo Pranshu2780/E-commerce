@@ -8,7 +8,7 @@ Back-end : Django <br/>
 Database: dbsqlite
 
 ### Todo
-1. To add payment option.
+1. To add payment option and add API.
 
 ### How to run project locally
 1. Install python and django on your local system.
